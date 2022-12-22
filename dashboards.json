@@ -1,0 +1,564 @@
+{
+  "startAt": 0,
+  "maxResults": 20,
+  "total": 15,
+  "dashboards": [
+    {
+      "description": "Dashboard tracking bug closing progress",
+      "id": "10106",
+      "isFavourite": false,
+      "name": "2022 Q1 Bug Fix",
+      "owner": {
+        "self": "https://salto-io.atlassian.net/rest/api/3/user?accountId=5fb551c8f8b01200695a98b4",
+        "displayName": "Igal Perelman",
+        "active": true,
+        "accountId": "5fb551c8f8b01200695a98b4",
+        "avatarUrls": {
+          "16x16": "https://secure.gravatar.com/avatar/90f86e6b0ca66091448db39dc77def26?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FIP-4.png",
+          "24x24": "https://secure.gravatar.com/avatar/90f86e6b0ca66091448db39dc77def26?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FIP-4.png",
+          "32x32": "https://secure.gravatar.com/avatar/90f86e6b0ca66091448db39dc77def26?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FIP-4.png",
+          "48x48": "https://secure.gravatar.com/avatar/90f86e6b0ca66091448db39dc77def26?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FIP-4.png"
+        }
+      },
+      "popularity": 1,
+      "self": "https://salto-io.atlassian.net/rest/api/3/dashboard/10106",
+      "sharePermissions": [
+        {
+          "id": 10197,
+          "type": "loggedin"
+        }
+      ],
+      "editPermissions": [
+        {
+          "id": 10192,
+          "type": "user",
+          "user": {
+            "self": "https://salto-io.atlassian.net/rest/api/3/user?accountId=5e6a1df25df5fb0cfee33250",
+            "displayName": "Amit Goldfarb",
+            "active": true,
+            "accountId": "5e6a1df25df5fb0cfee33250",
+            "avatarUrls": {
+              "16x16": "https://secure.gravatar.com/avatar/c777c44f356823d5d88b3690f2fe8b35?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAG-0.png",
+              "24x24": "https://secure.gravatar.com/avatar/c777c44f356823d5d88b3690f2fe8b35?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAG-0.png",
+              "32x32": "https://secure.gravatar.com/avatar/c777c44f356823d5d88b3690f2fe8b35?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAG-0.png",
+              "48x48": "https://secure.gravatar.com/avatar/c777c44f356823d5d88b3690f2fe8b35?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAG-0.png"
+            }
+          }
+        },
+        {
+          "id": 10193,
+          "type": "user",
+          "user": {
+            "self": "https://salto-io.atlassian.net/rest/api/3/user?accountId=5c728d2cf3a7ed3624d1f205",
+            "displayName": "Rami Tamir",
+            "active": true,
+            "accountId": "5c728d2cf3a7ed3624d1f205",
+            "avatarUrls": {
+              "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c728d2cf3a7ed3624d1f205/3342a3b7-375e-4d61-a5c0-246ddb502ed3/16",
+              "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c728d2cf3a7ed3624d1f205/3342a3b7-375e-4d61-a5c0-246ddb502ed3/24",
+              "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c728d2cf3a7ed3624d1f205/3342a3b7-375e-4d61-a5c0-246ddb502ed3/32",
+              "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c728d2cf3a7ed3624d1f205/3342a3b7-375e-4d61-a5c0-246ddb502ed3/48"
+            }
+          }
+        },
+        {
+          "id": 10194,
+          "type": "user",
+          "user": {
+            "self": "https://salto-io.atlassian.net/rest/api/3/user?accountId=5eea285a41f7000abb1b049d",
+            "displayName": "Neta Marcus",
+            "active": true,
+            "accountId": "5eea285a41f7000abb1b049d",
+            "avatarUrls": {
+              "16x16": "https://secure.gravatar.com/avatar/d7eb98791ab59871cb60c57076b388f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FNM-6.png",
+              "24x24": "https://secure.gravatar.com/avatar/d7eb98791ab59871cb60c57076b388f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FNM-6.png",
+              "32x32": "https://secure.gravatar.com/avatar/d7eb98791ab59871cb60c57076b388f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FNM-6.png",
+              "48x48": "https://secure.gravatar.com/avatar/d7eb98791ab59871cb60c57076b388f3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FNM-6.png"
+            }
+          }
+        },
+        {
+          "id": 10195,
+          "type": "user",
+          "user": {
+            "self": "https://salto-io.atlassian.net/rest/api/3/user?accountId=5c7289009170244d98d8192c",
+            "displayName": "Gil Hoffer",
+            "active": true,
+            "accountId": "5c7289009170244d98d8192c",
+            "avatarUrls": {
+              "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c7289009170244d98d8192c/99603019-a7de-40a7-8a11-2c1383ceaae6/16",
+              "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c7289009170244d98d8192c/99603019-a7de-40a7-8a11-2c1383ceaae6/24",
+              "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c7289009170244d98d8192c/99603019-a7de-40a7-8a11-2c1383ceaae6/32",
+              "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c7289009170244d98d8192c/99603019-a7de-40a7-8a11-2c1383ceaae6/48"
+            }
+          }
+        },
+        {
+          "id": 10196,
+          "type": "user",
+          "user": {
+            "self": "https://salto-io.atlassian.net/rest/api/3/user?accountId=5d945b4d85a58b0dd53111fd",
+            "displayName": "Omri Litvak",
+            "active": true,
+            "accountId": "5d945b4d85a58b0dd53111fd",
+            "avatarUrls": {
+              "16x16": "https://secure.gravatar.com/avatar/605d78237f771136c27a4c6b5860b2c7?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FOL-3.png",
+              "24x24": "https://secure.gravatar.com/avatar/605d78237f771136c27a4c6b5860b2c7?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FOL-3.png",
+              "32x32": "https://secure.gravatar.com/avatar/605d78237f771136c27a4c6b5860b2c7?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FOL-3.png",
+              "48x48": "https://secure.gravatar.com/avatar/605d78237f771136c27a4c6b5860b2c7?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FOL-3.png"
+            }
+          }
+        }
+      ],
+      "view": "/jira/dashboards/10106",
+      "systemDashboard": false
+    },
+    {
+      "description": "",
+      "id": "10112",
+      "isFavourite": false,
+      "name": "Adapters Dashboard",
+      "owner": {
+        "self": "https://salto-io.atlassian.net/rest/api/3/user?accountId=5c728d29d48a17049c3adb86",
+        "displayName": "Hadar Davidovich",
+        "active": true,
+        "accountId": "5c728d29d48a17049c3adb86",
+        "avatarUrls": {
+          "16x16": "https://secure.gravatar.com/avatar/6a9cccd00aecd73921138c884c7f4f76?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FHD-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/6a9cccd00aecd73921138c884c7f4f76?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FHD-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/6a9cccd00aecd73921138c884c7f4f76?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FHD-2.png",
+          "48x48": "https://secure.gravatar.com/avatar/6a9cccd00aecd73921138c884c7f4f76?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FHD-2.png"
+        }
+      },
+      "popularity": 1,
+      "self": "https://salto-io.atlassian.net/rest/api/3/dashboard/10112",
+      "sharePermissions": [
+        {
+          "id": 14338,
+          "type": "loggedin"
+        }
+      ],
+      "editPermissions": [],
+      "view": "/jira/dashboards/10112",
+      "systemDashboard": false
+    },
+    {
+      "description": "",
+      "id": "10109",
+      "isFavourite": false,
+      "name": "Amit's Incidents Dashboard",
+      "owner": {
+        "self": "https://salto-io.atlassian.net/rest/api/3/user?accountId=5e22506ba531f30ca385802d",
+        "displayName": "Amit Goldberg",
+        "active": true,
+        "accountId": "5e22506ba531f30ca385802d",
+        "avatarUrls": {
+          "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5e22506ba531f30ca385802d/03d270e1-ae94-4445-9f4f-998992daf80f/16",
+          "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5e22506ba531f30ca385802d/03d270e1-ae94-4445-9f4f-998992daf80f/24",
+          "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5e22506ba531f30ca385802d/03d270e1-ae94-4445-9f4f-998992daf80f/32",
+          "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5e22506ba531f30ca385802d/03d270e1-ae94-4445-9f4f-998992daf80f/48"
+        }
+      },
+      "popularity": 1,
+      "self": "https://salto-io.atlassian.net/rest/api/3/dashboard/10109",
+      "sharePermissions": [
+        {
+          "id": 10896,
+          "type": "loggedin"
+        }
+      ],
+      "editPermissions": [],
+      "view": "/jira/dashboards/10109",
+      "systemDashboard": false
+    },
+    {
+      "description": "",
+      "id": "10118",
+      "isFavourite": false,
+      "name": "Anastasia's Board",
+      "owner": {
+        "self": "https://salto-io.atlassian.net/rest/api/3/user?accountId=61fc08c7f5f5b80070c846d7",
+        "displayName": "Anastasia Rachuk",
+        "active": true,
+        "accountId": "61fc08c7f5f5b80070c846d7",
+        "avatarUrls": {
+          "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/61fc08c7f5f5b80070c846d7/0caf3008-2e62-4f26-a5ba-ba3d8b5c0595/16",
+          "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/61fc08c7f5f5b80070c846d7/0caf3008-2e62-4f26-a5ba-ba3d8b5c0595/24",
+          "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/61fc08c7f5f5b80070c846d7/0caf3008-2e62-4f26-a5ba-ba3d8b5c0595/32",
+          "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/61fc08c7f5f5b80070c846d7/0caf3008-2e62-4f26-a5ba-ba3d8b5c0595/48"
+        }
+      },
+      "popularity": 1,
+      "self": "https://salto-io.atlassian.net/rest/api/3/dashboard/10118",
+      "sharePermissions": [
+        {
+          "id": 65665,
+          "type": "loggedin"
+        }
+      ],
+      "editPermissions": [],
+      "view": "/jira/dashboards/10118",
+      "systemDashboard": false
+    },
+    {
+      "description": "",
+      "id": "10116",
+      "isFavourite": false,
+      "name": "Copy of Production Dashboard",
+      "owner": {
+        "self": "https://salto-io.atlassian.net/rest/api/3/user?accountId=5fa91999b2633d0076583a61",
+        "displayName": "Alon Stern",
+        "active": true,
+        "accountId": "5fa91999b2633d0076583a61",
+        "avatarUrls": {
+          "16x16": "https://secure.gravatar.com/avatar/90ccd84f150f4fab9ea92e7e7a0ea06e?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAS-0.png",
+          "24x24": "https://secure.gravatar.com/avatar/90ccd84f150f4fab9ea92e7e7a0ea06e?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAS-0.png",
+          "32x32": "https://secure.gravatar.com/avatar/90ccd84f150f4fab9ea92e7e7a0ea06e?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAS-0.png",
+          "48x48": "https://secure.gravatar.com/avatar/90ccd84f150f4fab9ea92e7e7a0ea06e?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAS-0.png"
+        }
+      },
+      "popularity": 1,
+      "self": "https://salto-io.atlassian.net/rest/api/3/dashboard/10116",
+      "sharePermissions": [
+        {
+          "id": 46331,
+          "type": "loggedin"
+        }
+      ],
+      "editPermissions": [
+        {
+          "id": 46330,
+          "type": "user",
+          "user": {
+            "self": "https://salto-io.atlassian.net/rest/api/3/user?accountId=5e22506ba531f30ca385802d",
+            "displayName": "Amit Goldberg",
+            "active": true,
+            "accountId": "5e22506ba531f30ca385802d",
+            "avatarUrls": {
+              "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5e22506ba531f30ca385802d/03d270e1-ae94-4445-9f4f-998992daf80f/16",
+              "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5e22506ba531f30ca385802d/03d270e1-ae94-4445-9f4f-998992daf80f/24",
+              "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5e22506ba531f30ca385802d/03d270e1-ae94-4445-9f4f-998992daf80f/32",
+              "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5e22506ba531f30ca385802d/03d270e1-ae94-4445-9f4f-998992daf80f/48"
+            }
+          }
+        }
+      ],
+      "view": "/jira/dashboards/10116",
+      "systemDashboard": false
+    },
+    {
+      "id": "10000",
+      "isFavourite": false,
+      "name": "Default dashboard",
+      "popularity": 0,
+      "self": "https://salto-io.atlassian.net/rest/api/3/dashboard/10000",
+      "sharePermissions": [
+        {
+          "id": 10000,
+          "type": "global"
+        }
+      ],
+      "editPermissions": [],
+      "view": "/jira/dashboards/10000",
+      "systemDashboard": true
+    },
+    {
+      "description": "",
+      "id": "10128",
+      "isFavourite": true,
+      "name": "INCIDENTs Opened Last Week",
+      "owner": {
+        "self": "https://salto-io.atlassian.net/rest/api/3/user?accountId=636428e9d66d8108a125f0ce",
+        "displayName": "Jonah Pressman",
+        "active": true,
+        "accountId": "636428e9d66d8108a125f0ce",
+        "avatarUrls": {
+          "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/636428e9d66d8108a125f0ce/6d839cb8-2619-4b9d-a22c-a6ff1cc2cec9/16",
+          "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/636428e9d66d8108a125f0ce/6d839cb8-2619-4b9d-a22c-a6ff1cc2cec9/24",
+          "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/636428e9d66d8108a125f0ce/6d839cb8-2619-4b9d-a22c-a6ff1cc2cec9/32",
+          "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/636428e9d66d8108a125f0ce/6d839cb8-2619-4b9d-a22c-a6ff1cc2cec9/48"
+        }
+      },
+      "popularity": 2,
+      "rank": 1,
+      "self": "https://salto-io.atlassian.net/rest/api/3/dashboard/10128",
+      "sharePermissions": [
+        {
+          "id": 65872,
+          "type": "loggedin"
+        }
+      ],
+      "editPermissions": [],
+      "view": "/jira/dashboards/10128",
+      "systemDashboard": false
+    },
+    {
+      "description": "",
+      "id": "10126",
+      "isFavourite": true,
+      "name": "INCIDENTs Opened This Week (Sun - Sat)",
+      "owner": {
+        "self": "https://salto-io.atlassian.net/rest/api/3/user?accountId=636428e9d66d8108a125f0ce",
+        "displayName": "Jonah Pressman",
+        "active": true,
+        "accountId": "636428e9d66d8108a125f0ce",
+        "avatarUrls": {
+          "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/636428e9d66d8108a125f0ce/6d839cb8-2619-4b9d-a22c-a6ff1cc2cec9/16",
+          "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/636428e9d66d8108a125f0ce/6d839cb8-2619-4b9d-a22c-a6ff1cc2cec9/24",
+          "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/636428e9d66d8108a125f0ce/6d839cb8-2619-4b9d-a22c-a6ff1cc2cec9/32",
+          "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/636428e9d66d8108a125f0ce/6d839cb8-2619-4b9d-a22c-a6ff1cc2cec9/48"
+        }
+      },
+      "popularity": 2,
+      "rank": 0,
+      "self": "https://salto-io.atlassian.net/rest/api/3/dashboard/10126",
+      "sharePermissions": [
+        {
+          "id": 65859,
+          "type": "loggedin"
+        }
+      ],
+      "editPermissions": [],
+      "view": "/jira/dashboards/10126",
+      "systemDashboard": false
+    },
+    {
+      "description": "",
+      "id": "10108",
+      "isFavourite": true,
+      "name": "Production Dashboard",
+      "owner": {
+        "self": "https://salto-io.atlassian.net/rest/api/3/user?accountId=5c728d29d48a17049c3adb86",
+        "displayName": "Hadar Davidovich",
+        "active": true,
+        "accountId": "5c728d29d48a17049c3adb86",
+        "avatarUrls": {
+          "16x16": "https://secure.gravatar.com/avatar/6a9cccd00aecd73921138c884c7f4f76?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FHD-2.png",
+          "24x24": "https://secure.gravatar.com/avatar/6a9cccd00aecd73921138c884c7f4f76?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FHD-2.png",
+          "32x32": "https://secure.gravatar.com/avatar/6a9cccd00aecd73921138c884c7f4f76?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FHD-2.png",
+          "48x48": "https://secure.gravatar.com/avatar/6a9cccd00aecd73921138c884c7f4f76?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FHD-2.png"
+        }
+      },
+      "popularity": 6,
+      "rank": 2,
+      "self": "https://salto-io.atlassian.net/rest/api/3/dashboard/10108",
+      "sharePermissions": [
+        {
+          "id": 11402,
+          "type": "loggedin"
+        }
+      ],
+      "editPermissions": [
+        {
+          "id": 11401,
+          "type": "user",
+          "user": {
+            "self": "https://salto-io.atlassian.net/rest/api/3/user?accountId=5e22506ba531f30ca385802d",
+            "displayName": "Amit Goldberg",
+            "active": true,
+            "accountId": "5e22506ba531f30ca385802d",
+            "avatarUrls": {
+              "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5e22506ba531f30ca385802d/03d270e1-ae94-4445-9f4f-998992daf80f/16",
+              "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5e22506ba531f30ca385802d/03d270e1-ae94-4445-9f4f-998992daf80f/24",
+              "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5e22506ba531f30ca385802d/03d270e1-ae94-4445-9f4f-998992daf80f/32",
+              "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5e22506ba531f30ca385802d/03d270e1-ae94-4445-9f4f-998992daf80f/48"
+            }
+          }
+        }
+      ],
+      "view": "/jira/dashboards/10108",
+      "systemDashboard": false
+    },
+    {
+      "description": "",
+      "id": "10111",
+      "isFavourite": false,
+      "name": "Production Dashboard Dan",
+      "owner": {
+        "self": "https://salto-io.atlassian.net/rest/api/3/user?accountId=61f8f548c6bd1a00691cc091",
+        "displayName": "Dan Avigdor",
+        "active": true,
+        "accountId": "61f8f548c6bd1a00691cc091",
+        "avatarUrls": {
+          "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/61f8f548c6bd1a00691cc091/b4bb3066-29da-4693-a46b-1e902bfeb3f7/16",
+          "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/61f8f548c6bd1a00691cc091/b4bb3066-29da-4693-a46b-1e902bfeb3f7/24",
+          "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/61f8f548c6bd1a00691cc091/b4bb3066-29da-4693-a46b-1e902bfeb3f7/32",
+          "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/61f8f548c6bd1a00691cc091/b4bb3066-29da-4693-a46b-1e902bfeb3f7/48"
+        }
+      },
+      "popularity": 1,
+      "self": "https://salto-io.atlassian.net/rest/api/3/dashboard/10111",
+      "sharePermissions": [
+        {
+          "id": 14222,
+          "type": "loggedin"
+        }
+      ],
+      "editPermissions": [
+        {
+          "id": 14221,
+          "type": "user",
+          "user": {
+            "self": "https://salto-io.atlassian.net/rest/api/3/user?accountId=5e22506ba531f30ca385802d",
+            "displayName": "Amit Goldberg",
+            "active": true,
+            "accountId": "5e22506ba531f30ca385802d",
+            "avatarUrls": {
+              "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5e22506ba531f30ca385802d/03d270e1-ae94-4445-9f4f-998992daf80f/16",
+              "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5e22506ba531f30ca385802d/03d270e1-ae94-4445-9f4f-998992daf80f/24",
+              "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5e22506ba531f30ca385802d/03d270e1-ae94-4445-9f4f-998992daf80f/32",
+              "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5e22506ba531f30ca385802d/03d270e1-ae94-4445-9f4f-998992daf80f/48"
+            }
+          }
+        }
+      ],
+      "view": "/jira/dashboards/10111",
+      "systemDashboard": false
+    },
+    {
+      "description": "",
+      "id": "10121",
+      "isFavourite": false,
+      "name": "Ron's Board",
+      "owner": {
+        "self": "https://salto-io.atlassian.net/rest/api/3/user?accountId=61aa8407fe9f300068d201dd",
+        "displayName": "Ron Witzman",
+        "active": true,
+        "accountId": "61aa8407fe9f300068d201dd",
+        "avatarUrls": {
+          "16x16": "https://secure.gravatar.com/avatar/ac16c653ab0df25df753d5e42f7cd6c6?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRW-4.png",
+          "24x24": "https://secure.gravatar.com/avatar/ac16c653ab0df25df753d5e42f7cd6c6?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRW-4.png",
+          "32x32": "https://secure.gravatar.com/avatar/ac16c653ab0df25df753d5e42f7cd6c6?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRW-4.png",
+          "48x48": "https://secure.gravatar.com/avatar/ac16c653ab0df25df753d5e42f7cd6c6?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRW-4.png"
+        }
+      },
+      "popularity": 1,
+      "self": "https://salto-io.atlassian.net/rest/api/3/dashboard/10121",
+      "sharePermissions": [
+        {
+          "id": 65667,
+          "type": "loggedin"
+        }
+      ],
+      "editPermissions": [],
+      "view": "/jira/dashboards/10121",
+      "systemDashboard": false
+    },
+    {
+      "description": "",
+      "id": "10123",
+      "isFavourite": false,
+      "name": "Salesforce dev-cycle2",
+      "owner": {
+        "self": "https://salto-io.atlassian.net/rest/api/3/user?accountId=5e6a1df25df5fb0cfee33250",
+        "displayName": "Amit Goldfarb",
+        "active": true,
+        "accountId": "5e6a1df25df5fb0cfee33250",
+        "avatarUrls": {
+          "16x16": "https://secure.gravatar.com/avatar/c777c44f356823d5d88b3690f2fe8b35?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAG-0.png",
+          "24x24": "https://secure.gravatar.com/avatar/c777c44f356823d5d88b3690f2fe8b35?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAG-0.png",
+          "32x32": "https://secure.gravatar.com/avatar/c777c44f356823d5d88b3690f2fe8b35?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAG-0.png",
+          "48x48": "https://secure.gravatar.com/avatar/c777c44f356823d5d88b3690f2fe8b35?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAG-0.png"
+        }
+      },
+      "popularity": 1,
+      "self": "https://salto-io.atlassian.net/rest/api/3/dashboard/10123",
+      "sharePermissions": [
+        {
+          "id": 65774,
+          "type": "loggedin"
+        }
+      ],
+      "editPermissions": [],
+      "view": "/jira/dashboards/10123",
+      "systemDashboard": false
+    },
+    {
+      "description": "",
+      "id": "10125",
+      "isFavourite": false,
+      "name": "Salesforce dev-cycle3",
+      "owner": {
+        "self": "https://salto-io.atlassian.net/rest/api/3/user?accountId=5e6a1df25df5fb0cfee33250",
+        "displayName": "Amit Goldfarb",
+        "active": true,
+        "accountId": "5e6a1df25df5fb0cfee33250",
+        "avatarUrls": {
+          "16x16": "https://secure.gravatar.com/avatar/c777c44f356823d5d88b3690f2fe8b35?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAG-0.png",
+          "24x24": "https://secure.gravatar.com/avatar/c777c44f356823d5d88b3690f2fe8b35?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAG-0.png",
+          "32x32": "https://secure.gravatar.com/avatar/c777c44f356823d5d88b3690f2fe8b35?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAG-0.png",
+          "48x48": "https://secure.gravatar.com/avatar/c777c44f356823d5d88b3690f2fe8b35?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAG-0.png"
+        }
+      },
+      "popularity": 1,
+      "self": "https://salto-io.atlassian.net/rest/api/3/dashboard/10125",
+      "sharePermissions": [
+        {
+          "id": 65775,
+          "type": "loggedin"
+        }
+      ],
+      "editPermissions": [],
+      "view": "/jira/dashboards/10125",
+      "systemDashboard": false
+    },
+    {
+      "description": "",
+      "id": "10122",
+      "isFavourite": false,
+      "name": "Salesforce Mentions",
+      "owner": {
+        "self": "https://salto-io.atlassian.net/rest/api/3/user?accountId=5e6a1df25df5fb0cfee33250",
+        "displayName": "Amit Goldfarb",
+        "active": true,
+        "accountId": "5e6a1df25df5fb0cfee33250",
+        "avatarUrls": {
+          "16x16": "https://secure.gravatar.com/avatar/c777c44f356823d5d88b3690f2fe8b35?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAG-0.png",
+          "24x24": "https://secure.gravatar.com/avatar/c777c44f356823d5d88b3690f2fe8b35?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAG-0.png",
+          "32x32": "https://secure.gravatar.com/avatar/c777c44f356823d5d88b3690f2fe8b35?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAG-0.png",
+          "48x48": "https://secure.gravatar.com/avatar/c777c44f356823d5d88b3690f2fe8b35?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAG-0.png"
+        }
+      },
+      "popularity": 1,
+      "self": "https://salto-io.atlassian.net/rest/api/3/dashboard/10122",
+      "sharePermissions": [
+        {
+          "id": 65773,
+          "type": "loggedin"
+        }
+      ],
+      "editPermissions": [],
+      "view": "/jira/dashboards/10122",
+      "systemDashboard": false
+    },
+    {
+      "description": "",
+      "id": "10113",
+      "isFavourite": false,
+      "name": "test",
+      "owner": {
+        "self": "https://salto-io.atlassian.net/rest/api/3/user?accountId=5fa91999b2633d0076583a61",
+        "displayName": "Alon Stern",
+        "active": true,
+        "accountId": "5fa91999b2633d0076583a61",
+        "avatarUrls": {
+          "16x16": "https://secure.gravatar.com/avatar/90ccd84f150f4fab9ea92e7e7a0ea06e?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAS-0.png",
+          "24x24": "https://secure.gravatar.com/avatar/90ccd84f150f4fab9ea92e7e7a0ea06e?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAS-0.png",
+          "32x32": "https://secure.gravatar.com/avatar/90ccd84f150f4fab9ea92e7e7a0ea06e?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAS-0.png",
+          "48x48": "https://secure.gravatar.com/avatar/90ccd84f150f4fab9ea92e7e7a0ea06e?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAS-0.png"
+        }
+      },
+      "popularity": 1,
+      "self": "https://salto-io.atlassian.net/rest/api/3/dashboard/10113",
+      "sharePermissions": [
+        {
+          "id": 26960,
+          "type": "loggedin"
+        }
+      ],
+      "editPermissions": [],
+      "view": "/jira/dashboards/10113",
+      "systemDashboard": false
+    }
+  ]
+}

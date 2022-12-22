@@ -1,0 +1,4 @@
+curl --request GET \
+  --url 'https://salto-io.atlassian.net/rest/api/3/dashboard' \
+  --user 'jonah.pressman@salto.io:3Y8Phgb1B0Smkbg0z9jf651C' \
+  --header 'Accept: application/json'
