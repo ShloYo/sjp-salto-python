@@ -6,6 +6,15 @@ Jira API calls to get all the incidents opened last week
 import requests
 from requests.auth import HTTPBasicAuth
 import json
+
+# Prepare the accumulators
+incidentsByAssignee={}
+incidentsByStatus={}
+incidentsByApplication={}
+incidentsByTier={}
+incidentsBySeverity={}
+incidentsByOperation={}
+incidentsByOperationAndApplication={}
  
 jiraToken = input("Enter the Jira Token String: ")
 url = "https://salto-io.atlassian.net/rest/api/3/search"
@@ -39,8 +48,6 @@ totalIncidentsOpenedLastWeek = formattedOutput["total"]
 
 # We are going to retrieve 100 incident issues with each call 
 for apiCallIteration in range(0,totalIncidentsOpenedLastWeek,100):
-  print("API Call Iteration - " + str(apiCallIteration))
-  input()
   #
   # customfield_10058 is orgTier
   # customfield_10046 is Incident Severity
@@ -69,28 +76,28 @@ for apiCallIteration in range(0,totalIncidentsOpenedLastWeek,100):
   )
 
   formattedOutput = json.loads(response.text)
-  print("Total Number of Incidents opened last week: ",formattedOutput["total"])
 
   # Loop through each incident issue and collect the relevant details
   for iteration in range(0,len(formattedOutput["issues"])):
-    print("--------")
-    print(str(iteration))
     essentialData = formattedOutput["issues"][iteration]
-    issueKey = essentialData["key"]
-    print ("Issue - " + issueKey) 
-
     fieldsInfo = essentialData["fields"]
 
     # Assignee
     assigneeInfo = fieldsInfo["assignee"]
     assigneeName = assigneeInfo["displayName"]
-    print ("Assigned to - " + assigneeName)
-
+    if assigneeName not in incidentsByAssignee.keys():
+      incidentsByAssignee[assigneeName] = 1
+    else:
+      incidentsByAssignee[assigneeName] +=1
+        
     # Status
     statusInfo = fieldsInfo["status"]
     statusText = statusInfo["name"]
-    print ("Incident Status - " + statusText)
-
+    if statusText not in incidentsByStatus.keys():
+      incidentsByStatus[statusText] = 1
+    else:
+      incidentsByStatus[statusText] +=1
+    
     # Application
     issueLabels = fieldsInfo["labels"]
     issueApplication = "Unknown"
@@ -98,24 +105,33 @@ for apiCallIteration in range(0,totalIncidentsOpenedLastWeek,100):
       if "application:" in issueLabels[labelIteration]:
         issueApplication = issueLabels[labelIteration].split(":")[1]
         break
-    print ("Application - " + issueApplication)
-
+    if issueApplication not in incidentsByApplication.keys():
+      incidentsByApplication[issueApplication] = 1
+    else:
+      incidentsByApplication[issueApplication] +=1
+    
     # orgTier is a custom field - found in DevTools customfield_10058
     if fieldsInfo["customfield_10058"]:
       orgTierCustomField = fieldsInfo["customfield_10058"]
       orgTierName = orgTierCustomField["value"]
     else:
       orgTierName = "Unknown"
-    print ("Tier - " + orgTierName)
-
+    if orgTierName not in incidentsByTier.keys():
+      incidentsByTier[orgTierName] = 1
+    else:
+      incidentsByTier[orgTierName] +=1
+    
     # Incident Severity is a custom field - found in DevTools customfield_10046
     if fieldsInfo["customfield_10046"]:
       severityCustomField = fieldsInfo["customfield_10046"]
       incidentSeverity = severityCustomField["value"]
     else:
       incidentSeverity = "Unknown"
-    print ("Incident Severity - " + incidentSeverity)
-
+    if incidentSeverity not in incidentsBySeverity.keys():
+      incidentsBySeverity[incidentSeverity] = 1
+    else:
+      incidentsBySeverity[incidentSeverity] +=1
+    
     # Activity
     if fieldsInfo["description"]:
       issueDescription = fieldsInfo["description"]
@@ -142,5 +158,27 @@ for apiCallIteration in range(0,totalIncidentsOpenedLastWeek,100):
     elif "Operation Type: PUSH" in issueActivity:
       issueOperationType = "PUSH"
     else:
-      issueOperationType = "Unknown"  
-    print ("Operation Type - " + issueOperationType)
+      issueOperationType = "Unknown"
+    if issueOperationType not in incidentsByOperation.keys():
+      incidentsByOperation[issueOperationType] = 1
+    else:
+      incidentsByOperation[issueOperationType] +=1
+        
+    # Operation and Application
+    oaKeyName = issueOperationType + "-" + issueApplication
+    if oaKeyName not in incidentsByOperationAndApplication.keys():
+      incidentsByOperationAndApplication[oaKeyName] = 1
+    else:
+      incidentsByOperationAndApplication[oaKeyName] +=1
+
+
+# Interim Stats - not yet formatted
+# print()
+# print("Total Number of Incidents opened last week: ",formattedOutput["total"])
+# print("IBAss = " + str(incidentsByAssignee))
+# print("IBS = " + str(incidentsByStatus))
+# print("IBApp = " + str(incidentsByApplication))
+# print("IBT = " + str(incidentsByTier))
+# print("IBSev = " + str(incidentsBySeverity))
+# print("IBO = " + str(incidentsByOperation))
+# print("IBOaA = " + str(incidentsByOperationAndApplication))
