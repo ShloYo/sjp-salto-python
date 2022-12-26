@@ -8,49 +8,61 @@ from requests.auth import HTTPBasicAuth
 import json
 
 jiraToken = input("Enter the Jira Token String: ")
-authString = "jonah.pressman@salto.io:"+jiraToken+"@"
-url = "https://"+authString+"salto-io.atlassian.net/rest/api/3/search"
-#auth = HTTPBasicAuth("jonah.pressman@salto.io", "jiraToken")
+#authString = "jonah.pressman@salto.io:"+jiraToken+"@"
+#url = "https://"+authString+"salto-io.atlassian.net/rest/api/3/search"
+url = "https://salto-io.atlassian.net/rest/api/3/search"
+auth = HTTPBasicAuth("jonah.pressman@salto.io",jiraToken)
 
 headers = {
-  "Accept": "application/json"
+  "Accept": "application/json", "Content-Type": "application/json"
 }
 
-query = {
+#
+# customfield_10058 is orgTier
+# customfield_10046 is Incident Severity
+#
+
+payload = json.dumps( {
   'jql': 'project = INCIDENT AND created >= startOfWeek(-7d) AND created <= endOfWeek(-7d)',
-  'fieldsByKeys':False,
+  'startAt': 0,
+  'maxResults': 100,
+  'fieldsByKeys': False,
   'fields': [
     "assignee",
     "labels",
     "description",
     "customfield_10058",
-    "summary"]
-}
+    "customfield_10046",
+    "summary"] 
+})
+
+# query = {
+#   'jql': 'project = INCIDENT AND created >= startOfWeek(-7d) AND created <= endOfWeek(-7d)',
+#   'startsAt':51,
+#   'fieldsByKeys':False,
+#   'fields': [
+#     "assignee",
+#     "labels",
+#     "description",
+#     "customfield_10058",
+#     "customfield_10046",
+#     "summary"]
+# }
 
 response = requests.request(
-   "GET",
+   "POST",
    url,
+   data=payload,
    headers=headers,
-   params=query
+   auth=auth
 )
 
 formattedOutput = json.loads(response.text)
 print("Total Number of Incidents opened last week: ",formattedOutput["total"])
 
-# maximum number of results per call is 50
-# take the number of total incidents and divide it by 50
-# subtract 1 because the first call has already been made
-# if not exaclty divisible by 50, add another iteration
-# the result will be the number of additional calls to make
-
-
-#Debug
-#print (len(formattedOutput["issues"]))
-
 for iteration in range(0,len(formattedOutput["issues"])):
   print("--------")
   print(str(iteration))
-  #print(formattedOutput["issues"][iteration])
   essentialData = formattedOutput["issues"][iteration]
   issueKey = essentialData["key"]
   print ("Issue - " + issueKey) 
@@ -76,24 +88,32 @@ for iteration in range(0,len(formattedOutput["issues"])):
     orgTierName = "Unknown"
   print ("Tier - " + orgTierName)
   
+  # Incident Severity is a custom field - found in DevTools customfield_10046
+  if fieldsInfo["customfield_10046"]:
+    severityCustomField = fieldsInfo["customfield_10046"]
+    incidentSeverity = severityCustomField["value"]
+  else:
+    incidentSeverity = "Unknown"
+  print ("Incident Severity - " + incidentSeverity)
+  
   if fieldsInfo["description"]:
     issueDescription = fieldsInfo["description"]
     issueDescriptionContent = issueDescription["content"]
     issueDescriptionContentDeep = issueDescriptionContent[0]
     issueDigDeeper = issueDescriptionContentDeep["content"]
     issueActivity = ""
-    for textIteration in range(0,len(issueDigDeeper),2):
-      issueDigDeepest = issueDigDeeper[textIteration]
-      issueDetailText = issueDigDeepest["text"]
-      if "Operation Type:" in issueDetailText:
-        issueActivity = issueDetailText
-        break
-      if "scheduled-operation" in issueDetailText:
-        issueActivity = "Operation Type: FETCH"
-        break
+    for textIteration in range(0,len(issueDigDeeper)):
+      if issueDigDeeper[textIteration]["type"] == "text":
+        issueDigDeepest = issueDigDeeper[textIteration]
+        issueDetailText = issueDigDeepest["text"]
+        if "Operation Type:" in issueDetailText:
+          issueActivity = issueDetailText
+          break
+        if "scheduled-operation" in issueDetailText:
+          issueActivity = "Operation Type: FETCH"
+          break
   else:
-    issueActivity= "Blank Issue Description"
-    
+    issueActivity= "Blank Issue Description"  
   if "Operation Type: FETCH" in issueActivity:
     issueOperationType = "FETCH"
   elif "Operation Type: DEPLOY" in issueActivity:
@@ -103,11 +123,4 @@ for iteration in range(0,len(formattedOutput["issues"])):
   else:
     issueOperationType = "Unknown"  
   print ("Operation Type - " + issueOperationType)
-   
-  #print (descriptionContent)
-  #print (len(descriptionContent))
-
-  input()
-  
-  #still need to deal with severity and then compile the stats.
   
