@@ -1,9 +1,0 @@
-Enter the Jira Token String: 
-Total Number of Incidents opened last week:  122
-IBAss = {'Jonah Pressman': 70, 'Omri Farkash': 5, 'Scott Dixon': 19, 'Dan Avigdor': 9, 'Amit Goldberg': 3, 'Geoffrey Routledge': 2, 'Eden Hassid': 1, 'Dan Putman': 11, 'Amit Goldfarb': 2}
-IBS = {'Done': 84, 'Open': 4, 'Customer Interaction': 21, 'In Progress': 13}
-IBApp = {'netsuite': 57, 'salesforce': 33, 'Unknown': 18, 'jira': 1, 'zendesk': 13}
-IBT = {'Free': 24, 'Paying': 36, 'Trial': 36, 'Unknown': 18, 'Pro': 8}
-IBSev = {'SEV3': 119, 'SEV1': 2, 'Unknown': 1}
-IBO = {'FETCH': 43, 'Unknown': 50, 'DEPLOY': 29}
-IBOaA = {'FETCH-netsuite': 17, 'FETCH-salesforce': 23, 'Unknown-netsuite': 26, 'Unknown-Unknown': 18, 'Unknown-salesforce': 5, 'DEPLOY-netsuite': 14, 'FETCH-jira': 1, 'DEPLOY-zendesk': 10, 'FETCH-zendesk': 2, 'Unknown-zendesk': 1, 'DEPLOY-salesforce': 5}

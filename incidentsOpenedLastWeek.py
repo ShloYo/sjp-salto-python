@@ -13,6 +13,7 @@ incidentsByStatus={}
 incidentsByApplication={}
 incidentsByTier={}
 incidentsBySeverity={}
+incidentsBySeverityAndStatus={}
 incidentsByOperation={}
 incidentsByOperationAndApplication={}
  
@@ -170,15 +171,31 @@ for apiCallIteration in range(0,totalIncidentsOpenedLastWeek,100):
       incidentsByOperationAndApplication[oaKeyName] = 1
     else:
       incidentsByOperationAndApplication[oaKeyName] +=1
+      
+    # Severity and Status
+    ssKeyName = incidentSeverity + "-" + statusText
+    if ssKeyName not in incidentsBySeverityAndStatus.keys():
+      incidentsBySeverityAndStatus[ssKeyName] = 1
+    else:
+      incidentsBySeverityAndStatus[ssKeyName] +=1
 
+# Loop through the stats categories and start presenting them
+stats={'Incidents By Assignee':dict(sorted(incidentsByAssignee.items())),
+            'Incidents By Application':dict(sorted(incidentsByApplication.items())),
+            'Incidents By Tier':dict(sorted(incidentsByTier.items())),
+            'Incidents By Severity':dict(sorted(incidentsBySeverity.items())),
+            'Incidents By Operation':dict(sorted(incidentsByOperation.items())),
+            'Incidents By Status':dict(sorted(incidentsByStatus.items())),
+            'Incidents By Severity and Status':dict(sorted(incidentsBySeverityAndStatus.items())),
+            'Incidents By Operation and Application':
+              dict(sorted(incidentsByOperationAndApplication.items()))}
 
-# Interim Stats - not yet formatted
-# print()
-# print("Total Number of Incidents opened last week: ",formattedOutput["total"])
-# print("IBAss = " + str(incidentsByAssignee))
-# print("IBS = " + str(incidentsByStatus))
-# print("IBApp = " + str(incidentsByApplication))
-# print("IBT = " + str(incidentsByTier))
-# print("IBSev = " + str(incidentsBySeverity))
-# print("IBO = " + str(incidentsByOperation))
-# print("IBOaA = " + str(incidentsByOperationAndApplication))
+print (str(totalIncidentsOpenedLastWeek) + " INCIDENT tickets opened last week\r")
+for statsKey in stats.keys():
+  print (statsKey)
+  print ("-"*len(statsKey))
+  for detailsKey in stats[statsKey].keys():
+    print (f"{detailsKey:<25}{str(stats[statsKey][detailsKey]):>12}")
+  print ()
+print ("-="*25)
+print ("Reminder: Jira Dashboard of Last Week's Incident Issues is available at https://salto-io.atlassian.net/jira/dashboards/10128\r")
