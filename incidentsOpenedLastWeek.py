@@ -6,6 +6,13 @@ Jira API calls to get all the incidents opened last week
 import requests
 from requests.auth import HTTPBasicAuth
 import json
+from dotenv import load_dotenv
+import os
+
+# Load environment variable(s) from file
+load_dotenv()
+jiraToken = os.getenv("JIRA_TOKEN")
+loginAddress = os.getenv("LOGIN_EMAIL")
 
 # Prepare the accumulators
 incidentsByAssignee={}
@@ -16,10 +23,9 @@ incidentsBySeverity={}
 incidentsBySeverityAndStatus={}
 incidentsByOperation={}
 incidentsByOperationAndApplication={}
- 
-jiraToken = input("Enter the Jira Token String: ")
+
 url = "https://salto-io.atlassian.net/rest/api/3/search"
-auth = HTTPBasicAuth("jonah.pressman@salto.io",jiraToken)
+auth = HTTPBasicAuth(loginAddress,jiraToken)
 headers = {
   "Accept": "application/json", 
   "Content-Type": "application/json"
