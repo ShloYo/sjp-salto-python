@@ -23,6 +23,8 @@ incidentsBySeverity={}
 incidentsBySeverityAndStatus={}
 incidentsByOperation={}
 incidentsByOperationAndApplication={}
+incidentsBySource={}
+incidentsBySourceAndApplication={}
 
 url = "https://salto-io.atlassian.net/rest/api/3/search"
 auth = HTTPBasicAuth(loginAddress,jiraToken)
@@ -58,6 +60,7 @@ for apiCallIteration in range(0,totalIncidentsOpenedLastWeek,100):
   #
   # customfield_10058 is orgTier
   # customfield_10046 is Incident Severity
+  # customfield_10103 is Type of Error (Source - System or User)
   #
   payload = json.dumps( {
   'jql': 'project = INCIDENT AND created >= startOfWeek(-7d) AND created <= endOfWeek(-7d)',
@@ -70,6 +73,7 @@ for apiCallIteration in range(0,totalIncidentsOpenedLastWeek,100):
     "description",
     "customfield_10058",
     "customfield_10046",
+    "customfield_10103",
     "summary",
     "status"] 
   })
@@ -138,6 +142,17 @@ for apiCallIteration in range(0,totalIncidentsOpenedLastWeek,100):
       incidentsBySeverity[incidentSeverity] = 1
     else:
       incidentsBySeverity[incidentSeverity] +=1
+      
+    # Type/Source of Error is a custom field - found in DevTools customfield_10103
+    if fieldsInfo["customfield_10103"]:
+      sourceCustomField = fieldsInfo["customfield_10103"]
+      incidentType = sourceCustomField["value"]
+    else:
+      incidentType = "Unknown"
+    if incidentType not in incidentsBySource.keys():
+      incidentsBySource[incidentType] = 1
+    else:
+      incidentsBySource[incidentType] +=1
     
     # Activity
     if fieldsInfo["description"]:
@@ -184,6 +199,13 @@ for apiCallIteration in range(0,totalIncidentsOpenedLastWeek,100):
       incidentsBySeverityAndStatus[ssKeyName] = 1
     else:
       incidentsBySeverityAndStatus[ssKeyName] +=1
+      
+    #Incident Type/Source and Application
+    saKeyName = incidentType + " - " + issueApplication
+    if saKeyName not in incidentsBySourceAndApplication.keys():
+      incidentsBySourceAndApplication[saKeyName] = 1
+    else:
+      incidentsBySourceAndApplication[saKeyName] = +1
 
 # Loop through the stats categories and start presenting them
 stats={'Incidents By Assignee':dict(sorted(incidentsByAssignee.items())),
@@ -192,9 +214,13 @@ stats={'Incidents By Assignee':dict(sorted(incidentsByAssignee.items())),
             'Incidents By Severity':dict(sorted(incidentsBySeverity.items())),
             'Incidents By Operation':dict(sorted(incidentsByOperation.items())),
             'Incidents By Status':dict(sorted(incidentsByStatus.items())),
+            'Incidents By Type/Source':dict(sorted(incidentsBySource.items())),
             'Incidents By Severity and Status':dict(sorted(incidentsBySeverityAndStatus.items())),
             'Incidents By Operation and Application':
-              dict(sorted(incidentsByOperationAndApplication.items()))}
+              dict(sorted(incidentsByOperationAndApplication.items())),
+            'Incidents By Type/Source and Application':
+              dict(sorted(incidentsBySourceAndApplication.items()))
+      }
 
 print (str(totalIncidentsOpenedLastWeek) + " INCIDENT tickets opened last week\r")
 for statsKey in stats.keys():
