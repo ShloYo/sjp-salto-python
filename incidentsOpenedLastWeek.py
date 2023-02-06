@@ -205,7 +205,7 @@ for apiCallIteration in range(0,totalIncidentsOpenedLastWeek,100):
     if saKeyName not in incidentsBySourceAndApplication.keys():
       incidentsBySourceAndApplication[saKeyName] = 1
     else:
-      incidentsBySourceAndApplication[saKeyName] = +1
+      incidentsBySourceAndApplication[saKeyName] +=1
 
 # Loop through the stats categories and start presenting them
 stats={'Incidents By Assignee':dict(sorted(incidentsByAssignee.items())),
