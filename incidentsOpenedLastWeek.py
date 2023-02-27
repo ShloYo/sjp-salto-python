@@ -111,7 +111,7 @@ for apiCallIteration in range(0,totalIncidentsOpenedLastWeek,100):
     
     # Application
     issueLabels = fieldsInfo["labels"]
-    issueApplication = "Unknown"
+    issueApplication = "Cross App"
     for labelIteration in range(0,len(issueLabels)-1):
       if "application:" in issueLabels[labelIteration]:
         issueApplication = issueLabels[labelIteration].split(":")[1]
@@ -125,8 +125,10 @@ for apiCallIteration in range(0,totalIncidentsOpenedLastWeek,100):
     if fieldsInfo["customfield_10058"]:
       orgTierCustomField = fieldsInfo["customfield_10058"]
       orgTierName = orgTierCustomField["value"]
+      if orgTierName == "NA":
+        orgTierName = "Affects All Tiers"
     else:
-      orgTierName = "Unknown"
+      orgTierName = "Not defined"
     if orgTierName not in incidentsByTier.keys():
       incidentsByTier[orgTierName] = 1
     else:
@@ -137,7 +139,7 @@ for apiCallIteration in range(0,totalIncidentsOpenedLastWeek,100):
       severityCustomField = fieldsInfo["customfield_10046"]
       incidentSeverity = severityCustomField["value"]
     else:
-      incidentSeverity = "Unknown"
+      incidentSeverity = "Not defined"
     if incidentSeverity not in incidentsBySeverity.keys():
       incidentsBySeverity[incidentSeverity] = 1
     else:
@@ -148,7 +150,7 @@ for apiCallIteration in range(0,totalIncidentsOpenedLastWeek,100):
       sourceCustomField = fieldsInfo["customfield_10103"]
       incidentType = sourceCustomField["value"]
     else:
-      incidentType = "Unknown"
+      incidentType = "Not defined"
     if incidentType not in incidentsBySource.keys():
       incidentsBySource[incidentType] = 1
     else:
@@ -180,7 +182,7 @@ for apiCallIteration in range(0,totalIncidentsOpenedLastWeek,100):
     elif "Operation Type: PUSH" in issueActivity:
       issueOperationType = "PUSH"
     else:
-      issueOperationType = "Unknown"
+      issueOperationType = "General Op"
     if issueOperationType not in incidentsByOperation.keys():
       incidentsByOperation[issueOperationType] = 1
     else:
@@ -224,8 +226,9 @@ stats={'Incidents By Assignee':dict(sorted(incidentsByAssignee.items())),
 
 print (str(totalIncidentsOpenedLastWeek) + " INCIDENT tickets opened last week\r")
 for statsKey in stats.keys():
+  #print ("\033[1m" + statsKey + "\033[0m")
   print (statsKey)
-  print ("-"*len(statsKey))
+  #print ("-"*len(statsKey))
   for detailsKey in stats[statsKey].keys():
     print (f"{detailsKey:<25}{str(stats[statsKey][detailsKey]):>12}")
   print ()
